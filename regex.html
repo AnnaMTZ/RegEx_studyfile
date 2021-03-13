@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Regex study file</title>
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+
+
+<script>
+
+
+const string = 'file1.jpg filee2.jpg fileee3.jpg fileeee4.png fileeeee5.jpg ';
+
+// const regex = /wild/; //- will match a word in a string
+// const regex = /^wild$/; //- will match is the whole string === regex
+
+// const regex = /(\w+){6,9}\.jpg/g;
+
+// const regex = /file/g;
+
+
+const regex = /(?<=[le+].jpg)w//g
+
+let match = regex.exec(string);
+
+while (match) {
+  const filename = match;
+  console.log(filename);
+  match = regex.exec(string);
+}
+
+
+
+
+</script>
+
+
+
+
+  </body>
+</html>
